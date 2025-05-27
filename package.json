@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "email dev",
-    "export": "email export"
+    "export": "email export",
+    "build": "email build",
+    "preview": "email preview"
   },
   "dependencies": {
     "@react-email/button": "0.0.19",
