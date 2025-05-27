@@ -1,12 +1,6 @@
 {
-  "buildCommand": "npm run export",
+  "buildCommand": "npm run dev",
   "outputDirectory": "out",
   "installCommand": "npm install",
-  "framework": null,
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/Examples/stripe-welcome.html"
-    }
-  ]
+  "framework": null
 } 
