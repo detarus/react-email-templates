@@ -74,8 +74,6 @@ export default function Email() {
           </table>
           <Section style={{ textAlign: 'center' }}>
             <Button
-              pX={20}
-              pY={12}
               style={btn}
               href="https://vercel.com/teams/invite/foo"
             >
@@ -174,6 +172,7 @@ const btn = {
   lineHeight: '50px',
   textDecoration: 'none',
   textAlign: 'center' as const,
+  padding: '12px 20px',
 };
 
 const spacing = {

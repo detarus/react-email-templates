@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@react-email/button": "0.0.19",
+    "@react-email/components": "0.0.41",
     "@react-email/container": "0.0.15",
     "@react-email/head": "0.0.12",
     "@react-email/heading": "0.0.15",
@@ -16,8 +17,12 @@
     "@react-email/img": "0.0.11",
     "@react-email/link": "0.0.12",
     "@react-email/preview": "0.0.13",
+    "@react-email/render": "1.1.2",
     "@react-email/section": "0.0.16",
     "@react-email/text": "0.1.4",
-    "react-email": "2.1.6"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@types/react": "^19.0.0",
+    "react-email": "4.0.15"
   }
 }

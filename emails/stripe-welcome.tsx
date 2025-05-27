@@ -34,8 +34,6 @@ export default function Email() {
               about your account right from your dashboard.
             </Text>
             <Button
-              pX={10}
-              pY={10}
               style={button}
               href="https://dashboard.stripe.com/login"
             >
