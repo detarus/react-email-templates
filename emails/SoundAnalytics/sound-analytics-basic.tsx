@@ -98,11 +98,11 @@ export const SoundAnalyticsBigEmail = ({
             </Section>
 
             {/* Main Gradient Hero Section */}
-            <Section className="mb-8 rounded-xl overflow-hidden" style={{
+            <Section className="mb-8 max-w-[calc(100vw-3rem)] rounded-xl overflow-hidden" style={{
               background: 'linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%)',
               position: 'relative',
             }}>
-              <div className="px-8 py-16 text-center relative z-10">
+              <div className="mx-8 py-16 text-center relative z-10">
                 <Heading className="text-white font-bold text-4xl mb-0 leading-tight" style={{
                   fontSize: '32px',
                   lineHeight: '44px',

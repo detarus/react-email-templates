@@ -1,0 +1,20 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".react-email/dist",
+  "installCommand": "npm install",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/preview",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/preview/(.*)",
+      "destination": "/preview/$1"
+    }
+  ]
+} 

@@ -82,7 +82,7 @@ export const SoundAnalyticsServicesEmail = ({
             </Section>
 
             {/* Hero Section */}
-            <Section className="mb-8 rounded-xl overflow-hidden" style={{
+            <Section className="mb-8 max-w-[calc(100vw-3rem)] rounded-xl overflow-hidden" style={{
               background: 'linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%)',
             }}>
               <div className="px-8 py-16 text-center">
