@@ -15,18 +15,18 @@ import {
   Text,
 } from '@react-email/components';
 
-interface SoundAnalyticsBigEmailProps {
+interface SoundAnalyticsOfferEmailProps {
   userName?: string;
   companyName?: string;
   ctaLink?: string;
 }
 
-export const SoundAnalyticsBigEmail = ({
+export const SoundAnalyticsOfferEmail = ({
   userName = 'Дмитрий',
   companyName = 'Tareev Studio',
   ctaLink = 'https://docs.google.com/spreadsheets/d/1wrXY8qgbYseFwkndeYvg63reLIiirh9iZn5RFigrosY/',
-}: SoundAnalyticsBigEmailProps) => {
-  const previewText = `Ваш отдел продаж может больше - ${companyName}`;
+}: SoundAnalyticsOfferEmailProps) => {
+  const previewText = `Как мы помогли увеличить продажи на 47% за 3 месяца - ${companyName}`;
 
   return (
     <Html>
@@ -136,7 +136,7 @@ export const SoundAnalyticsBigEmail = ({
         </style>
         <Body className="bg-black font-sans text-white m-0 p-0">
           <Container className="mx-auto max-w-[600px] bg-black">
-            {/* Header */}
+            {/* Header with Logo */}
             <Section className="px-6 py-8">
               <table width="100%" cellPadding="0" cellSpacing="0" style={{ margin: '0' }}>
                 <tr>
@@ -188,7 +188,7 @@ export const SoundAnalyticsBigEmail = ({
               </table>
             </Section>
 
-            {/* Hero Section */}
+            {/* Main Gradient Hero Section */}
             <Section className="mb-8" style={{
               backgroundColor: '#8B5CF6',
               padding: '0',
@@ -201,212 +201,269 @@ export const SoundAnalyticsBigEmail = ({
                   color: '#FEFEFE',
                   fontWeight: '700',
                   fontSize: '24px',
-                  lineHeight: '36px',
-                  margin: '0 0 16px 0',
+                  lineHeight: '44px',
+                  margin: '0',
                   textAlign: 'center'
                 }}>
-                  Увеличьте продажи на 25-47% с помощью AI-анализа звонков
+                  Как увеличить продажи<br />на 47% за 3 месяца
                 </Heading>
-                <Text style={{
-                  color: '#FEFEFE',
-                  fontSize: '18px',
-                  lineHeight: '28px',
-                  margin: '0',
-                  opacity: '0.9'
-                }}>
-                  Агентная система автоматического анализа переговоров для отделов продаж
-                </Text>
               </div>
             </Section>
 
-            {/* Content */}
+            {/* Content Section */}
             <Section className="px-6 pb-8">
               {/* Introduction */}
               <div style={{ marginBottom: '32px' }}>
                 <Text style={{
-                  color: '#FEFEFE',
                   fontSize: '16px',
                   lineHeight: '24px',
-                  margin: '0 0 24px 0'
+                  margin: '0 0 24px 0',
+                  color: '#FEFEFE'
                 }} className="dark-text">
-                  Здравствуйте!<br />
-                  Меня зовут Дмитрий Тареев, я основатель веб-студии полного цикла Tareev.studio. За 5 лет мы реализовали больше 77 проектов и помогли десяткам компаний автоматизировать процессы продаж.
-                </Text>
-                <Text style={{
-                  color: '#D1D5DB',
-                  fontSize: '16px',
-                  lineHeight: '24px',
-                  margin: '0 0 24px 0'
-                }} className="dark-text-secondary">
-                  Хочу рассказать о нашей системе AI-анализа звонков, которая помогает руководителям отделов продаж видеть полную картину эффективности команды.
+                  Здравствуйте, {userName}!<br />
+                  Меня зовут Дмитрий Тареев, основатель Tareev Studio. За 5 лет мы помогли 77+ компаниям автоматизировать процессы продаж с помощью ИИ. Наши клиенты в среднем увеличивают конверсию на 25-47% уже в первые 3 месяца.
                 </Text>
               </div>
 
-              {/* Features */}
-              <div style={{ marginBottom: '32px' }}>
-                <Heading style={{
-                  color: '#FEFEFE',
-                  fontWeight: '700',
-                  fontSize: '20px',
-                  lineHeight: '28px',
-                  margin: '0 0 24px 0'
-                }} className="dark-text">
-                  Как работает система умной аналитики звонков?
-                </Heading>
+              {/* Success Story Section */}
+              <div style={{
+                marginBottom: '32px',
+                padding: '24px',
+                backgroundColor: '#1F2937',
+                border: '1px solid #374151',
+                borderRadius: '12px'
+              }}>
+                <div style={{ display: 'flex', marginBottom: '16px' }}>
+                  <div style={{
+                    width: '12px',
+                    height: '12px',
+                    backgroundColor: '#10B981',
+                    borderRadius: '50%',
+                    marginRight: '8px',
+                    marginTop: '6px'
+                  }}></div>
+                  <Text style={{
+                    color: '#10B981',
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    margin: '0'
+                  }}>ИСТОРИЯ УСПЕХА</Text>
+                </div>
+                
+                <Text style={{
+                  fontSize: '16px',
+                  lineHeight: '24px',
+                  margin: '0 0 16px 0',
+                  color: '#D1D5DB',
+                }} className="dark-text-secondary">
+                  <strong style={{ color: '#FEFEFE' }} className="dark-text">Компания "ТехноСервис"</strong> внедрила нашу систему анализа звонков и за 3 месяца:
+                </Text>
                 
                 <ul style={{ 
                   color: '#D1D5DB',
-                  paddingLeft: '20px',
-                  margin: '0 0 32px 0'
-                }}>
+                  paddingLeft: '20px'
+                }} className="dark-text-secondary">
                   <li style={{ 
-                    marginBottom: '12px',
-                    fontSize: '16px',
-                    lineHeight: '24px'
+                    marginBottom: '8px',
+                    fontSize: '15px',
+                    lineHeight: '22px'
                   }}>
-                    Автоматически анализирует каждый звонок и показывает качество переговоров
+                    Увеличила конверсию звонков с 12% до 18% (+47%)
                   </li>
                   <li style={{ 
-                    marginBottom: '12px',
-                    fontSize: '16px',
-                    lineHeight: '24px'
+                    marginBottom: '8px',
+                    fontSize: '15px',
+                    lineHeight: '22px'
                   }}>
-                    Выявляет пропущенные этапы продаж и возможности для улучшения
+                    Сократила время обучения новых менеджеров в 2 раза
                   </li>
                   <li style={{ 
-                    marginBottom: '12px',
-                    fontSize: '16px',
-                    lineHeight: '24px'
+                    fontSize: '15px',
+                    lineHeight: '22px'
                   }}>
-                    Отслеживает соблюдение скриптов и техник работы с возражениями
-                  </li>
-                  <li style={{ 
-                    marginBottom: '12px',
-                    fontSize: '16px',
-                    lineHeight: '24px'
-                  }}>
-                    Формирует персональные рекомендации для каждого сотрудника
-                  </li>
-                  <li style={{ 
-                    fontSize: '16px',
-                    lineHeight: '24px'
-                  }}>
-                    Предоставляет данные для принятия стратегических решений
+                    Получила дополнительно 2.3 млн рублей выручки
                   </li>
                 </ul>
               </div>
 
-              {/* Results */}
+              {/* Exclusive Section */}
               <div style={{ marginBottom: '32px' }}>
                 <Heading style={{
-                  color: '#FEFEFE',
-                  fontWeight: '700',
-                  fontSize: '20px',
-                  lineHeight: '28px',
-                  margin: '0 0 24px 0'
-                }}>
-                  Результаты наших клиентов:
+                  fontSize: '24px',
+                  lineHeight: '32px',
+                  margin: '0 0 16px 0',
+                  fontWeight: '600',
+                  color: '#FEFEFE'
+                }} className="dark-text">
+                  Как это работает для вашего бизнеса
                 </Heading>
                 
-                <table width="100%" cellPadding="0" cellSpacing="0">
-                  <tr>
-                    <td style={{ paddingBottom: '16px' }}>
-                      <div style={{ backgroundColor: '#065F46', padding: '24px', borderRadius: '12px' }}>
-                        <Text style={{
-                          color: '#FEFEFE',
-                          fontWeight: '700',
-                          fontSize: '24px',
-                          lineHeight: '32px',
-                          margin: '0 0 8px 0'
-                        }}>+25-47%</Text>
-                        <Text style={{
-                          color: '#A7F3D0',
-                          fontSize: '14px',
-                          lineHeight: '20px',
-                          margin: '0'
-                        }}>рост конверсии звонков в сделки</Text>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style={{ paddingBottom: '16px' }}>
-                      <div style={{ backgroundColor: '#1E3A8A', padding: '24px', borderRadius: '12px' }}>
-                        <Text style={{
-                          color: '#FEFEFE',
-                          fontWeight: '700',
-                          fontSize: '24px',
-                          lineHeight: '32px',
-                          margin: '0 0 8px 0'
-                        }}>-60%</Text>
-                        <Text style={{
-                          color: '#BFDBFE',
-                          fontSize: '14px',
-                          lineHeight: '20px',
-                          margin: '0'
-                        }}>время адаптации новых сотрудников</Text>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div style={{ backgroundColor: '#581C87', padding: '24px', borderRadius: '12px' }}>
-                        <Text style={{
-                          color: '#FEFEFE',
-                          fontWeight: '700',
-                          fontSize: '24px',
-                          lineHeight: '32px',
-                          margin: '0 0 8px 0'
-                        }}>+30%</Text>
-                        <Text style={{
-                          color: '#DDD6FE',
-                          fontSize: '14px',
-                          lineHeight: '20px',
-                          margin: '0'
-                        }}>средний чек продаж</Text>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-
-              {/* CTA */}
-              <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-                <Button
-                  href={ctaLink}
-                  style={{
-                    backgroundColor: '#8B5CF6',
-                    color: '#FEFEFE',
-                    padding: '18px 36px',
-                    fontSize: '18px',
-                    fontWeight: '700',
-                    textDecoration: 'none',
-                    display: 'inline-block',
-                    border: 'none',
-                    marginBottom: '16px',
-                    borderRadius: '12px',
-                  }}
-                  className="dark-button-primary"
-                >
-                  Посмотреть примеры анализа звонков
-                </Button>
                 <Text style={{
-                  color: '#9CA3AF',
-                  fontSize: '14px',
-                  lineHeight: '20px',
-                  margin: '0'
-                }}>
-                  Бесплатная консультация • Анализ 20 звонков • Персональные рекомендации
+                  fontSize: '16px',
+                  lineHeight: '24px',
+                  margin: '0 0 24px 0',
+                  color: '#D1D5DB',
+                }} className="dark-text-secondary">
+                  Наша система интеллектуального анализа звонков помогает руководителям продаж видеть полную картину и принимать решения на основе данных, а не догадок:
                 </Text>
               </div>
 
-              {/* Contact */}
+              {/* Feature List with Bullet Points */}
+              <div style={{ marginBottom: '32px' }}>
+                <ul style={{ 
+                  color: '#D1D5DB',
+                  paddingLeft: '20px',
+                  margin: '0 0 32px 0'
+                }} className="dark-text-secondary">
+                  <li style={{ 
+                    marginBottom: '12px',
+                    fontSize: '16px',
+                    lineHeight: '24px'
+                  }}>
+                    Показывает реальную эффективность каждого менеджера
+                  </li>
+                  <li style={{ 
+                    marginBottom: '12px',
+                    fontSize: '16px',
+                    lineHeight: '24px'
+                  }}>
+                    Выявляет точки роста в каждом разговоре
+                  </li>
+                  <li style={{ 
+                    marginBottom: '12px',
+                    fontSize: '16px',
+                    lineHeight: '24px'
+                  }}>
+                    Автоматически отслеживает соблюдение скриптов продаж
+                  </li>
+                  <li style={{ 
+                    fontSize: '16px',
+                    lineHeight: '24px'
+                  }}>
+                    Предоставляет готовые рекомендации для улучшения результатов
+                  </li>
+                </ul>
+              </div>
+
+              {/* Limited Offer Section */}
+              <div style={{
+                marginBottom: '32px',
+                padding: '24px',
+                backgroundColor: '#7C2D12',
+                border: '1px solid #EA580C',
+                borderRadius: '12px'
+              }}>
+                <div style={{ display: 'flex', marginBottom: '16px' }}>
+                  <div style={{
+                    width: '12px',
+                    height: '12px',
+                    backgroundColor: '#F97316',
+                    borderRadius: '50%',
+                    marginRight: '8px',
+                    marginTop: '6px'
+                  }}></div>
+                  <Text style={{
+                    color: '#FED7AA',
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    margin: '0'
+                  }}>ОГРАНИЧЕННОЕ ПРЕДЛОЖЕНИЕ</Text>
+                </div>
+                
+                <Text style={{
+                  fontSize: '16px',
+                  lineHeight: '24px',
+                  margin: '0 0 16px 0',
+                  color: '#FED7AA',
+                }}>
+                  В январе мы запускаем пилотную программу только для <strong style={{ color: '#FEFEFE' }}>5 компаний</strong>. Участники получают:
+                </Text>
+                
+                <ul style={{ 
+                  color: '#FED7AA',
+                  paddingLeft: '20px',
+                  margin: '0 0 16px 0'
+                }}>
+                  <li style={{ 
+                    marginBottom: '8px',
+                    fontSize: '15px',
+                    lineHeight: '22px'
+                  }}>
+                    Бесплатное внедрение (обычно 150 000 ₽)
+                  </li>
+                  <li style={{ 
+                    marginBottom: '8px',
+                    fontSize: '15px',
+                    lineHeight: '22px'
+                  }}>
+                    3 месяца сопровождения по специальной цене
+                  </li>
+                  <li style={{ 
+                    fontSize: '15px',
+                    lineHeight: '22px'
+                  }}>
+                    Гарантию результата или возврат средств
+                  </li>
+                </ul>
+                
+                <Text style={{
+                  color: '#FEFEFE',
+                  fontSize: '14px',
+                  fontWeight: '600',
+                  margin: '0'
+                }}>Осталось 2 места</Text>
+              </div>
+
+              {/* Example Analysis Section */}
+              <div style={{ marginBottom: '32px' }}>
+                <Heading style={{
+                  fontSize: '20px',
+                  lineHeight: '28px',
+                  margin: '0 0 16px 0',
+                  fontWeight: '600',
+                  color: '#FEFEFE'
+                }} className="dark-text">
+                  Посмотрите, как это выглядит на практике
+                </Heading>
+                
+                <Text style={{
+                  fontSize: '16px',
+                  lineHeight: '24px',
+                  margin: '0 0 32px 0',
+                  color: '#D1D5DB',
+                }} className="dark-text-secondary">
+                  Мы подготовили реальный пример анализа звонков с рекомендациями. Посмотрите, какие инсайты получает руководитель отдела продаж:
+                </Text>
+
+                {/* CTA Button */}
+                <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+                  <Button
+                    href={ctaLink}
+                    style={{
+                      backgroundColor: '#8B5CF6',
+                      color: '#FEFEFE',
+                      padding: '16px 32px',
+                      borderRadius: '12px',
+                      fontSize: '16px',
+                      fontWeight: '600',
+                      textDecoration: 'none',
+                      display: 'inline-block',
+                      border: 'none',
+                    }}
+                    className="dark-button-primary"
+                  >
+                    Посмотреть пример анализа звонков →
+                  </Button>
+                </div>
+              </div>
+
               <div style={{ textAlign: 'center', marginBottom: '32px' }}>
                 <Text style={{
                   color: '#D1D5DB',
                   fontSize: '16px',
                   lineHeight: '24px',
                   margin: '0 0 16px 0'
-                }}>
+                }} className="dark-text-secondary">
                   Готовы обсудить ваши задачи и показать, как система поможет именно вам:
                 </Text>
                 
@@ -481,7 +538,7 @@ export const SoundAnalyticsBigEmail = ({
                   fontSize: '14px',
                   lineHeight: '20px',
                   margin: '0'
-                }}>
+                }} className="dark-text-secondary">
                   С уважением,<br />
                   Дмитрий Тареев<br />
                   <span style={{ color: '#9CA3AF' }}>Основатель Tareev.studio • 77+ успешных проектов</span>
@@ -495,10 +552,10 @@ export const SoundAnalyticsBigEmail = ({
   );
 };
 
-SoundAnalyticsBigEmail.PreviewProps = {
+SoundAnalyticsOfferEmail.PreviewProps = {
   userName: 'Дмитрий',
   companyName: 'Tareev Studio',
   ctaLink: 'https://docs.google.com/spreadsheets/d/1wrXY8qgbYseFwkndeYvg63reLIiirh9iZn5RFigrosY/',
-} as SoundAnalyticsBigEmailProps;
+} as SoundAnalyticsOfferEmailProps;
 
-export default SoundAnalyticsBigEmail; 
+export default SoundAnalyticsOfferEmail; 
