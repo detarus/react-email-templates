@@ -7,7 +7,7 @@
     "export": "email export",
     "build": "email build",
     "preview": "email preview",
-    "vercel-build": "npm run export"
+    "vercel-build": "npm run build && cd .react-email && npm run build"
   },
   "dependencies": {
     "@react-email/button": "0.0.19",
