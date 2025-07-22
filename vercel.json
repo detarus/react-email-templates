@@ -5,5 +5,5 @@
       "use": "@vercel/next"
     }
   ],
-  "installCommand": "npm install && npm run build"
+  "installCommand": "npm install && npm run build && ls -R"
 } 
