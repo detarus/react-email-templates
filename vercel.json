@@ -1,20 +1,9 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": ".react-email/dist",
-  "installCommand": "npm install",
-  "framework": null,
-  "rewrites": [
+  "builds": [
     {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/preview",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/preview/(.*)",
-      "destination": "/preview/$1"
+      "src": ".react-email/package.json",
+      "use": "@vercel/next"
     }
-  ]
+  ],
+  "installCommand": "npm install && npm run build"
 } 
