@@ -209,7 +209,7 @@ export const SoundAnalyticsBigEmail = ({
                   lineHeight: '24px',
                   margin: '0 0 24px 0'
                 }} className="dark-text">
-                  <a href="https://flowtune.pro" style={{ color: '#FEFEFE' }}>Flowtune.pro</a> - это эфффективный отдел контроля качества, который 24/7 помогает вашей команде расти и развиваться по вашим регламентам с детальными отчетвми и рекомендациями.
+                  <a href="https://flowtune.pro" style={{ color: '#FEFEFE' }}>Flowtune.pro</a> - это эфффективный отдел контроля качества, который 24/7 помогает вашей команде расти и развиваться по вашим регламентам с детальными отчетами и рекомендациями.
                 </Text>
               </div>
 
